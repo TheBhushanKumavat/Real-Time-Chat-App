@@ -1,0 +1,212 @@
+/* Explore Users Page */
+.explore-layout {
+  padding: var(--spacing-xl);
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--canvas-soft);
+}
+
+.explore-header {
+  margin-bottom: var(--spacing-xl);
+  width: 100%;
+}
+
+.explore-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -1.28px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.explore-header p {
+  color: var(--body);
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.explore-search {
+  display: flex;
+  align-items: center;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  gap: var(--spacing-md);
+  max-width: 520px;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-level-1);
+}
+
+.explore-search:focus-within {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-level-2), 0 0 0 3px rgba(23, 23, 23, 0.05);
+  transform: translateY(-1px);
+}
+
+.explore-search input {
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+}
+
+.search-icon {
+  color: var(--mute);
+  flex-shrink: 0;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.user-card {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-level-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(135deg, var(--canvas-soft-2) 0%, var(--canvas-soft) 100%);
+  z-index: 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-level-3);
+  border-color: var(--hairline-strong);
+}
+
+.contact-avatar.large {
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--spacing-md);
+  font-size: 28px;
+  font-weight: 600;
+  z-index: 1;
+  border: 4px solid var(--canvas);
+  box-shadow: var(--shadow-level-1);
+}
+
+.user-card-info {
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+  z-index: 1;
+}
+
+.user-card-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: var(--spacing-xxs);
+}
+
+.user-card .primary-btn {
+  width: 100%;
+  padding: 0 var(--spacing-md);
+  height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+  border-radius: var(--radius-pill);
+  z-index: 1;
+}
+
+.user-card-bio {
+  font-size: 14px;
+  color: var(--body);
+  margin-top: var(--spacing-xs);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.explore-empty {
+  grid-column: 1 / -1;
+}
+
+.empty-state .primary-btn {
+  width: auto;
+  padding: 0 var(--spacing-lg);
+  height: 44px;
+}
+
+/* Explore Dark Theme */
+[data-theme="dark"] .explore-layout {
+  background: transparent;
+}
+
+[data-theme="dark"] .explore-header p {
+  color: var(--body);
+}
+
+[data-theme="dark"] .explore-search {
+  background: var(--canvas);
+  border-color: var(--hairline);
+}
+
+[data-theme="dark"] .explore-search input {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .user-card {
+  background: var(--canvas);
+  border-color: var(--hairline);
+}
+
+[data-theme="dark"] .user-card:hover {
+  box-shadow: var(--shadow-level-3);
+  border-color: var(--hairline-strong);
+}
+
+[data-theme="dark"] .user-card .primary-btn {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+[data-theme="dark"] .user-card .primary-btn:hover {
+  background: #e5e5e5;
+}
+
+[data-theme="dark"] .user-card-info h3 {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .status-text.online,
+[data-theme="dark"] .online-text {
+  color: var(--success);
+}
+
+[data-theme="dark"] .status-text.offline,
+[data-theme="dark"] .offline-text {
+  color: var(--mute);
+}

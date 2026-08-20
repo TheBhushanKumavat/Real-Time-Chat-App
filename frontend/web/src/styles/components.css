@@ -1,0 +1,213 @@
+/* Custom Dialog Overlay */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.dialog-box {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--shadow-level-4);
+  animation: slideUp 0.3s ease;
+}
+
+.dialog-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.6px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.dialog-message {
+  color: var(--body);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.dialog-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-pill-sm);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.dialog-btn.cancel {
+  background: var(--canvas-soft);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+}
+
+.dialog-btn.cancel:hover {
+  background: var(--canvas-soft-2);
+}
+
+.dialog-btn.confirm {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.dialog-btn.confirm:hover {
+  background: #2a2a2a;
+}
+
+.dialog-btn.confirm.destructive {
+  background: var(--error);
+  color: white;
+}
+
+.dialog-btn.confirm.destructive:hover {
+  background: var(--error-deep);
+}
+
+/* Theme Toggle */
+.theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--canvas-soft);
+  border: 1px solid var(--hairline);
+  color: var(--body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--canvas-soft-2);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background: var(--canvas-soft);
+  border-color: var(--hairline);
+  color: var(--body);
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background: var(--canvas-soft-2);
+  color: var(--ink);
+}
+
+/* Password Input */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  padding-right: 44px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: var(--mute);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.password-toggle:hover {
+  color: var(--body);
+  background: var(--canvas-soft-2);
+}
+
+/* Field Errors */
+.field-error {
+  color: var(--error);
+  font-size: 12px;
+  margin-top: var(--spacing-xxs);
+  line-height: 16px;
+}
+
+.input-error {
+  border-color: var(--error) !important;
+}
+
+.input-error:focus {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 3px rgba(238, 0, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .input-error {
+  border-color: var(--error) !important;
+}
+
+[data-theme="dark"] .input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
+
+/* Dialog Dark Theme */
+[data-theme="dark"] .dialog-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .dialog-box {
+  background: var(--canvas);
+  border-color: var(--hairline);
+}
+
+[data-theme="dark"] .dialog-btn.cancel {
+  background: var(--canvas-soft);
+  color: var(--ink);
+  border-color: var(--hairline);
+}
+
+[data-theme="dark"] .dialog-btn.cancel:hover {
+  background: var(--canvas-soft-2);
+}
+
+[data-theme="dark"] .dialog-btn.confirm {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+[data-theme="dark"] .dialog-btn.confirm:hover {
+  background: #e5e5e5;
+}
+
+[data-theme="dark"] .dialog-btn.confirm.destructive {
+  background: var(--error);
+  color: white;
+}
+
+.required-asterisk { color: var(--error); margin-left: 2px; font-weight: bold; }
+

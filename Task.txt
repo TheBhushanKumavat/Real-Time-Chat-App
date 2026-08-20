@@ -1,0 +1,59 @@
+Objective
+
+Build a real-time chat application using React Native (preferred) or React for the frontend and Node.js + Express + Socket.io for the backend.
+
+1. Frontend (Web or Mobile)
+
+Use React Native (preferred) or React.
+
+Create a clean and user-friendly chat interface.
+
+The application should allow users to:
+
+Send messages.
+Receive messages instantly using Socket.io.
+View previous messages after refreshing the application.
+Display message timestamps.
+2. Backend
+
+Use Node.js with Express.
+
+Implement the following REST APIs:
+
+Send messages.
+Fetch chat history.
+Real-Time Communication (Mandatory)
+
+Implement Socket.io for real-time messaging.
+
+The application must:
+
+Deliver messages instantly without requiring a page refresh.
+Broadcast new messages to connected users in real time.
+Handle user connections and disconnections gracefully.
+
+Note: Socket.io implementation is mandatory. Alternative approaches (polling, Firebase, etc.) will not be accepted.
+
+3. Code Quality
+Organize the project into meaningful folders.
+Follow clean architecture and reusable coding practices.
+Handle API and Socket errors gracefully.
+Write clean, readable, and maintainable code.
+4. README
+
+Include a README containing:
+
+Project setup instructions.
+Steps to run the frontend.
+Steps to run the backend.
+Environment variables required.
+Design decisions.
+Assumptions made.
+Bonus (Optional)
+Username-based password based auth , argon2 .
+Typing indicator.
+Online/offline user status.
+Message read/delivered status.
+Store messages in MongoDB, SQLite, or another database.
+Deploy the backend on Render, Railway, or another hosting platform and share the live API URL.
+Submission
