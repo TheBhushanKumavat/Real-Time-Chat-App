@@ -10,6 +10,11 @@ require('./data/db');
 const app = express();
 const server = http.createServer(app);
 
+// Health Check Route
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 // Mount Edge Tier REST Gateway
 app.use('/api', apiGateway);
 
