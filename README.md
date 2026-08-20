@@ -1,5 +1,7 @@
 # Real-Time Chat App
 
+**Live Demo:** [https://real-time-chat-app-z0b4.onrender.com/](https://real-time-chat-app-z0b4.onrender.com/)
+
 A full-stack real-time chat application with a Node.js/Express/Socket.io backend and a React (Vite) frontend.
 
 ## Features
